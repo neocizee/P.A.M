@@ -4,14 +4,22 @@ Content-Type: application/json
 {"username": "testeo", "password": "testeo"}
 ###
 
-POST http://127.0.0.1:8000/signup
+POST http://127.0.0.1/signup
 Content-Type: application/json
 
 {"username": "testeo", "password": "testeo", "email": "testeo@test.com"}
 ###
 
-GET http://127.0.0.1:8000/token
+GET http://127.0.0.1/token
 Content-Type: application/json
 Authorization: Token 92703ba68d1135da4ca08888e0e5bee7e9f099af
 
 {}
+###
+
+GET http://127.0.0.1:8000/arboles
+Content-Type: application/json
+Authorization: Token 92703ba68d1135da4ca08888e0e5bee7e9f099af
+
+{}
+###

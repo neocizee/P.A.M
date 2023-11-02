@@ -37,3 +37,14 @@ def signup(request):
 @permission_classes([IsAuthenticated])
 def token(request):
     return Response("funcionando {}".format(request.user.email))
+
+
+from arb_datos.models import Arbolado
+from django.core import serializers
+@api_view(['GET'])
+@authentication_classes([SessionAuthentication, TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def listaArboles(request):
+    arboles = serializers.serialize('json', Arbolado.objects.all())
+    print(arboles)
+    return Response(arboles, content_type='application/json')

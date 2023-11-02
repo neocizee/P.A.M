@@ -7,4 +7,5 @@ urlpatterns = [
     re_path('login', views.login),
     re_path('signup', views.signup),
     re_path('token', views.token),
+    re_path('arboles', views.listaArboles)
 ]
