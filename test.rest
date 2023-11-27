@@ -1,25 +1,95 @@
-POST http://127.0.0.1:8000/login
+POST http://127.0.0.1:8000/api/login
 Content-Type: application/json
 
 {"username": "testeo", "password": "testeo"}
 ###
 
-POST http://127.0.0.1/signup
+POST http://127.0.0.1:8000/api/signup
 Content-Type: application/json
 
 {"username": "testeo", "password": "testeo", "email": "testeo@test.com"}
 ###
 
-GET http://127.0.0.1/token
+GET http://127.0.0.1:8000/api/testToken
 Content-Type: application/json
-Authorization: Token 92703ba68d1135da4ca08888e0e5bee7e9f099af
+Authorization: Token 846f7109c6b152fc8a18085cc2612df4b9896658
 
 {}
 ###
 
-GET http://127.0.0.1:8000/arboles
+GET http://127.0.0.1:8000/api/arboles
 Content-Type: application/json
-Authorization: Token 92703ba68d1135da4ca08888e0e5bee7e9f099af
+Authorization: Token 846f7109c6b152fc8a18085cc2612df4b9896658
 
 {}
+###
+
+
+POST http://127.0.0.1:8000/api/borrarArbol
+Content-Type: application/json
+Authorization: Token 846f7109c6b152fc8a18085cc2612df4b9896658
+
+{"pk": }
+
+###
+
+POST http://127.0.0.1:8000/api/editarArbol
+Content-Type: application/json
+Authorization: Token 846f7109c6b152fc8a18085cc2612df4b9896658
+
+{ "pk": 6,
+  "maps_long": 35.123132,
+  "maps_lat": 45.12312321,
+  "observacion": "Muy roto",
+  "altura_calle": 150,
+  "nombre_calle": "Salta",
+  "ancho_vereda": 4.45,
+  "altura_aprox": 6,
+  "circurns": 0.18,
+  "diametro": 0.06,
+  "tiene_clavel": true,
+  "vereda_damaged": false,
+  "vereda_levantada": true,
+  "element_rare": false,
+  "element_rare_type": "",
+  "element_rare_desc": "",
+  "activo": true,
+  "arbol_area_detalles": 1,
+  "arbol_especie": 1,
+  "arbol_estado": 1,
+  "vereda_estado": 1}
+
+###
+
+GET http://127.0.0.1:8000/api/listaAForeign
+Content-Type: application/json
+Authorization: Token 846f7109c6b152fc8a18085cc2612df4b9896658
+
+{}
+###
+
+POST http://127.0.0.1:8000/api/agregarArbol
+Content-Type: application/json
+Authorization: Token 846f7109c6b152fc8a18085cc2612df4b9896658
+
+{"maps_long": 35.123132,
+  "maps_lat": 45.12312321,
+  "observacion": "Muy destruido",
+  "altura_calle": 150,
+  "nombre_calle": "Salta",
+  "ancho_vereda": 4.45,
+  "altura_aprox": 6,
+  "circurns": 0.18,
+  "diametro": 0.06,
+  "tiene_clavel": true,
+  "vereda_damaged": false,
+  "vereda_levantada": false,
+  "element_rare": false,
+  "element_rare_type": "",
+  "element_rare_desc": "",
+  "activo": true,
+  "arbol_area_detalles": 1,
+  "arbol_especie": 1,
+  "arbol_estado": 1,
+  "vereda_estado": 1}
 ###

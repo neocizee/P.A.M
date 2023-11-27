@@ -34,6 +34,7 @@ class Arbolado(models.Model):
     vereda_estado = models.ForeignKey(Vereda_estado, on_delete=models.CASCADE)
 
     altura_calle = models.IntegerField()
+    nombre_calle = models.CharField(max_length=50, null=False)
     ancho_vereda = models.FloatField()
     altura_aprox = models.IntegerField()
     circurns = models.FloatField()
@@ -44,8 +45,8 @@ class Arbolado(models.Model):
     vereda_damaged = models.BooleanField()
     vereda_levantada = models.BooleanField()
     element_rare = models.BooleanField()
-    element_rare_type = models.TextField(max_length=50)
-    element_rare_desc = models.TextField(max_length=200) 
+    element_rare_type = models.TextField(max_length=50, blank=True)
+    element_rare_desc = models.TextField(max_length=200, blank=True) 
 
     activo = models.BooleanField()
 
